@@ -1,66 +1,62 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://UI/Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/End_Game.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 36
-font_data = ExtResource( 2 )
+size = 32
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 20
-font_data = ExtResource( 2 )
-
-[node name="Menu" type="Control"]
+[node name="End_Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Background" type="ColorRect" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 566.0
-margin_bottom = 482.0
-color = Color( 0, 0, 0, 0.501961 )
+margin_right = 575.0
+margin_bottom = 1024.0
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
 margin_right = 576.0
-margin_bottom = 512.0
+margin_bottom = 718.0
 custom_fonts/font = SubResource( 1 )
-text = "Welcome to Match-3"
+text = "Thanks for playing!
+
+Your level 1 score was 
+
+Your level 2 time was"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+autowrap = true
 
 [node name="Play" type="Button" parent="."]
-margin_left = 238.0
+margin_left = 188.0
 margin_top = 512.0
-margin_right = 338.0
-margin_bottom = 552.0
+margin_right = 388.0
+margin_bottom = 539.0
 custom_fonts/font = SubResource( 2 )
-text = "Play"
+text = "Play again?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 238.0
-margin_top = 562.0
-margin_right = 338.0
-margin_bottom = 602.0
-custom_fonts/font = SubResource( 3 )
+margin_left = 188.0
+margin_top = 560.0
+margin_right = 388.0
+margin_bottom = 587.0
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false

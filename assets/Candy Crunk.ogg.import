@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Candy Crunk.ogg-dc7c970f157d24ba1efa5ac0a2a33fd2.oggstr"
+
+[deps]
+
+source_file="res://assets/Candy Crunk.ogg"
+dest_files=[ "res://.import/Candy Crunk.ogg-dc7c970f157d24ba1efa5ac0a2a33fd2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
