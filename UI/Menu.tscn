@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/background1.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -22,6 +23,11 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -130, 0 )
+texture = ExtResource( 3 )
+centered = false
 
 [node name="Background" type="ColorRect" parent="."]
 margin_left = 10.0

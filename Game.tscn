@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://UI/Camera.gd" type="Script" id=5]
 [ext_resource path="res://assets/Finna get nice with it.ogg" type="AudioStream" id=6]
 [ext_resource path="res://UI/Instructions.gd" type="Script" id=7]
+[ext_resource path="res://assets/background2.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -20,7 +21,17 @@ font_data = ExtResource( 4 )
 size = 24
 font_data = ExtResource( 4 )
 
+[sub_resource type="Environment" id=4]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 1.45
+glow_strength = 0.98
+
 [node name="Game" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+centered = false
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -122,6 +133,9 @@ __meta__ = {
 
 [node name="Countdown" type="Timer" parent="HUD/Instructions"]
 autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
 
 [connection signal="timeout" from="grid/Bonus" to="grid" method="_on_Bonus_timeout"]
 [connection signal="timeout" from="HUD/Timer" to="HUD" method="_on_Timer_timeout"]
