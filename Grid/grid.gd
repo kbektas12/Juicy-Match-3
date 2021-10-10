@@ -211,6 +211,8 @@ func destroy_matched():
 	for i in width:
 		for j in height:
 			if(all_pieces[i][j].is_matched):
+				remove_child(all_pieces[i][j])
+				get_node("/root/Game/Dying").add_child(all_pieces[i][j])
 				all_pieces[i][j].die()
 				all_pieces[i][j] = null
 	collapse_columns()

@@ -31,6 +31,10 @@ yStart = 832
 offset = 70
 background = ExtResource( 2 )
 
+[node name="Bonus" type="Timer" parent="grid"]
+wait_time = 5.0
+autostart = true
+
 [node name="Camera" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
@@ -39,6 +43,8 @@ script = ExtResource( 6 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+
+[node name="Dying" type="Node2D" parent="."]
 
 [node name="HUD" type="Control" parent="."]
 margin_right = 40.0
@@ -73,6 +79,8 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="HUD"]
 autostart = true
+
+[node name="Bonus" type="Node2D" parent="HUD"]
 
 [node name="Instructions" type="Control" parent="HUD"]
 pause_mode = 2

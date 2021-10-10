@@ -7,7 +7,7 @@ var multiplier = 2
 
 var level = 1
 
-var level1_default = 60
+var level1_default = 5
 
 var level2_default = 2000
 

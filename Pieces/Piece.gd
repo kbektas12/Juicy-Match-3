@@ -14,7 +14,7 @@ var dying_progress = 0
 
 func _ready():
 	randomize()
-	$Sprite.material = $Sprite.materia.duplicate()
+	$Sprite.material = $Sprite.material.duplicate()
 
 func _physics_process(_delta):
 	if dying and not $Tween.is_active() and dying_progress >= 1:
